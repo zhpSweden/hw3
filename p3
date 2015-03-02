@@ -1,0 +1,36 @@
+Plus
+Gt
+parse error at (line 1, column 1):
+unexpected "&"
+expecting "+", "-", "*", "/", ">", ">=", "<" or "<="
+parse error at (line 1, column 1):
+unexpected "i"
+expecting white space, "(", uppercase letter, digit, "true" or "false"
+Op Times (Op Plus (Var "X") (Val (IntVal 5))) (Var "Y")
+Op Plus (Var "X") (Op Times (Val (IntVal 5)) (Var "Y"))
+Op Plus (Op Minus (Op Plus (Val (IntVal 1)) (Val (IntVal 2))) (Val (IntVal 3))) (Op Plus (Val (IntVal 1)) (Val (IntVal 3)))
+Op Plus (Var "Y") (Op Plus (Val (IntVal 3)) (Op Plus (Var "Z") (Var "U")))
+Op Plus (Var "Y") (Op Plus (Val (IntVal 3)) (Op Plus (Var "Z") (Var "U")))
+Var "X"
+Var "X"
+Val (IntVal 5)
+Op Plus (Var "X") (Val (IntVal 5))
+Op Times (Op Plus (Var "X") (Val (IntVal 5))) (Var "Y")
+Op Times (Op Plus (Var "X") (Val (IntVal 5))) (Var "Y")
+Op Plus (Op Times (Op Plus (Var "X") (Val (IntVal 5))) (Var "Y")) (Op Divide (Var "X") (Val (IntVal 5)))
+Op Plus (Op Times (Op Plus (Var "X") (Val (IntVal 5))) (Var "Y")) (Op Divide (Var "X") (Val (IntVal 5)))
+Op Plus (Op Times (Op Plus (Var "X") (Val (IntVal 5))) (Var "Y")) (Op Divide (Var "X") (Val (IntVal 5)))
+Output Store:
+fromList [("X",IntVal 0),("Y",IntVal 10)]
+Output Store:
+fromList [("X",IntVal 0),("Y",IntVal 10)]
+Output Store:
+fromList [("F",IntVal 2),("N",IntVal 0),("X",IntVal 1),("Z",IntVal 2)]
+Output Store:
+fromList [("F",IntVal 2),("N",IntVal 0),("X",IntVal 1),("Z",IntVal 2)]
+Output Store:
+fromList [("X",IntVal 3)]
+Output Store:
+fromList [("X",IntVal 0),("Y",IntVal 3),("Z",IntVal 30)]
+
+
